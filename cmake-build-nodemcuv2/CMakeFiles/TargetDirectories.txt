@@ -1,0 +1,5 @@
+/Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles/rebuild_cache.dir
+/Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles/edit_cache.dir
+/Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles/Z_DUMMY_TARGET.dir
+/Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles/Debug.dir
+/Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles/Production.dir

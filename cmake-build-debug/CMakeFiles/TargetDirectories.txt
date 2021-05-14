@@ -1,0 +1,5 @@
+/Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-debug/CMakeFiles/Z_DUMMY_TARGET.dir
+/Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-debug/CMakeFiles/Debug.dir
+/Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-debug/CMakeFiles/Production.dir
