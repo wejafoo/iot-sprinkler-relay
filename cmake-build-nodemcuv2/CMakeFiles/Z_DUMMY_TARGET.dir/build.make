@@ -62,10 +62,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler
+CMAKE_SOURCE_DIR = /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2
+CMAKE_BINARY_DIR = /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Z_DUMMY_TARGET.dir/depend.make
@@ -78,28 +78,238 @@ include CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
 CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj"
-	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj -c /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj -c /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/src/main.cpp
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.i"
-	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/src/main.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.i
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/src/main.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.i
 
 CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.s"
-	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/src/main.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.s
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/src/main.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.obj: ../.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.obj"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.obj -c /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.i"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.s"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.obj: ../.pio/libdeps/nodemcuv2/ESP\ Async\ WebServer/src/AsyncEventSource.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.obj"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.obj -c "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/AsyncEventSource.cpp"
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.i"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/AsyncEventSource.cpp" > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.s"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/AsyncEventSource.cpp" -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.obj: ../.pio/libdeps/nodemcuv2/ESP\ Async\ WebServer/src/AsyncWebSocket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.obj"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.obj -c "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/AsyncWebSocket.cpp"
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.i"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/AsyncWebSocket.cpp" > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.s"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/AsyncWebSocket.cpp" -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.obj: ../.pio/libdeps/nodemcuv2/ESP\ Async\ WebServer/src/SPIFFSEditor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.obj"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.obj -c "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/SPIFFSEditor.cpp"
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.i"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/SPIFFSEditor.cpp" > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.s"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/SPIFFSEditor.cpp" -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.obj: ../.pio/libdeps/nodemcuv2/ESP\ Async\ WebServer/src/WebAuthentication.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.obj"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.obj -c "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/WebAuthentication.cpp"
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.i"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/WebAuthentication.cpp" > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.s"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/WebAuthentication.cpp" -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.obj: ../.pio/libdeps/nodemcuv2/ESP\ Async\ WebServer/src/WebHandlers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.obj"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.obj -c "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/WebHandlers.cpp"
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.i"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/WebHandlers.cpp" > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.s"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/WebHandlers.cpp" -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.obj: ../.pio/libdeps/nodemcuv2/ESP\ Async\ WebServer/src/WebRequest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.obj"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.obj -c "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/WebRequest.cpp"
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.i"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/WebRequest.cpp" > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.s"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/WebRequest.cpp" -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.obj: ../.pio/libdeps/nodemcuv2/ESP\ Async\ WebServer/src/WebResponses.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.obj"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.obj -c "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/WebResponses.cpp"
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.i"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/WebResponses.cpp" > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.s"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/WebResponses.cpp" -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.obj: ../.pio/libdeps/nodemcuv2/ESP\ Async\ WebServer/src/WebServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.obj"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.obj -c "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/WebServer.cpp"
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.i"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/WebServer.cpp" > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.s"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESP Async WebServer/src/WebServer.cpp" -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.obj: ../.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.obj"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.obj -c /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.i"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.s"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.obj: ../.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.obj"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.obj -c /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.i"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.s"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.obj: ../.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.obj"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.obj -c /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.i"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.s"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.obj: ../.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.obj"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.obj -c /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.i"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.s"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.s
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.obj: CMakeFiles/Z_DUMMY_TARGET.dir/flags.make
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.obj: ../.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.obj"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.obj -c /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.i"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c > CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.i
+
+CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.s"
+	/Users/wes/.platformio/packages/toolchain-xtensa/bin/xtensa-lx106-elf-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c -o CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.s
 
 # Object files for target Z_DUMMY_TARGET
 Z_DUMMY_TARGET_OBJECTS = \
-"CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj"
+"CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.obj" \
+"CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.obj"
 
 # External object files for target Z_DUMMY_TARGET
 Z_DUMMY_TARGET_EXTERNAL_OBJECTS =
 
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/src/main.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.obj
+Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.obj
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/build.make
 Z_DUMMY_TARGET: CMakeFiles/Z_DUMMY_TARGET.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Z_DUMMY_TARGET"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable Z_DUMMY_TARGET"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Z_DUMMY_TARGET.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -112,6 +322,6 @@ CMakeFiles/Z_DUMMY_TARGET.dir/clean:
 .PHONY : CMakeFiles/Z_DUMMY_TARGET.dir/clean
 
 CMakeFiles/Z_DUMMY_TARGET.dir/depend:
-	cd /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2 /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2 /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles/Z_DUMMY_TARGET.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2 /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2 /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles/Z_DUMMY_TARGET.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Z_DUMMY_TARGET.dir/depend
 

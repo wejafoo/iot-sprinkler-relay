@@ -11,7 +11,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
 
-The C compiler identification is AppleClang, found in "/Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles/3.19.2/CompilerIdC/CMakeCCompilerId.o"
+The C compiler identification is AppleClang, found in "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles/3.19.2/CompilerIdC/CMakeCCompilerId.o"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/CC 
@@ -24,5 +24,5 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
 
-The CXX compiler identification is AppleClang, found in "/Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles/3.19.2/CompilerIdCXX/CMakeCXXCompilerId.o"
+The CXX compiler identification is AppleClang, found in "/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles/3.19.2/CompilerIdCXX/CMakeCXXCompilerId.o"
 

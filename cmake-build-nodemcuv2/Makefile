@@ -67,10 +67,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler
+CMAKE_SOURCE_DIR = /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2
+CMAKE_BINARY_DIR = /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -99,9 +99,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -168,6 +168,384 @@ Production/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Production.dir/build.make CMakeFiles/Production.dir/build
 .PHONY : Production/fast
 
+.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.obj: .pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.obj
+
+.PHONY : .pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.obj
+
+# target to build an object file
+.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.obj
+.PHONY : .pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.obj
+
+.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.i: .pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.i
+
+.PHONY : .pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.i
+
+# target to preprocess a source file
+.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.i
+.PHONY : .pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.i
+
+.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.s: .pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.s
+
+.PHONY : .pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.s
+
+# target to generate assembly for a file
+.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.s
+.PHONY : .pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.cpp.s
+
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.obj: .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.obj
+
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.obj
+
+# target to build an object file
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.obj
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.obj
+
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.i: .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.i
+
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.i
+
+# target to preprocess a source file
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.i
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.i
+
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.s: .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.s
+
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.s
+
+# target to generate assembly for a file
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.s
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.cpp.s
+
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.obj: .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.obj
+
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.obj
+
+# target to build an object file
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.obj
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.obj
+
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.i: .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.i
+
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.i
+
+# target to preprocess a source file
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.i
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.i
+
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.s: .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.s
+
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.s
+
+# target to generate assembly for a file
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.s
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.cpp.s
+
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.obj: .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.obj
+
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.obj
+
+# target to build an object file
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.obj
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.obj
+
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.i: .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.i
+
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.i
+
+# target to preprocess a source file
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.i
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.i
+
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.s: .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.s
+
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.s
+
+# target to generate assembly for a file
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.s
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.cpp.s
+
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.obj: .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.obj
+
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.obj
+
+# target to build an object file
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.obj
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.obj
+
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.i: .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.i
+
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.i
+
+# target to preprocess a source file
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.i
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.i
+
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.s: .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.s
+
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.s
+
+# target to generate assembly for a file
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.s
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.cpp.s
+
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.obj: .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.obj
+
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.obj
+
+# target to build an object file
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.obj
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.obj
+
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.i: .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.i
+
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.i
+
+# target to preprocess a source file
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.i
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.i
+
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.s: .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.s
+
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.s
+
+# target to generate assembly for a file
+.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.s
+.PHONY : .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.c.s
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.obj: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.obj
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.obj
+
+# target to build an object file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.obj
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.obj
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.i: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.i
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.i
+
+# target to preprocess a source file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.i
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.i
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.s: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.s
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.s
+
+# target to generate assembly for a file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.s
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.cpp.s
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.obj: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.obj
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.obj
+
+# target to build an object file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.obj
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.obj
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.i: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.i
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.i
+
+# target to preprocess a source file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.i
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.i
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.s: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.s
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.s
+
+# target to generate assembly for a file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.s
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.cpp.s
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.obj: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.obj
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.obj
+
+# target to build an object file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.obj
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.obj
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.i: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.i
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.i
+
+# target to preprocess a source file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.i
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.i
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.s: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.s
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.s
+
+# target to generate assembly for a file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.s
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.cpp.s
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.obj: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.obj
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.obj
+
+# target to build an object file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.obj
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.obj
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.i: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.i
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.i
+
+# target to preprocess a source file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.i
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.i
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.s: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.s
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.s
+
+# target to generate assembly for a file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.s
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.cpp.s
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.obj: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.obj
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.obj
+
+# target to build an object file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.obj
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.obj
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.i: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.i
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.i
+
+# target to preprocess a source file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.i
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.i
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.s: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.s
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.s
+
+# target to generate assembly for a file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.s
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.cpp.s
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.obj: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.obj
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.obj
+
+# target to build an object file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.obj
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.obj
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.i: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.i
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.i
+
+# target to preprocess a source file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.i
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.i
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.s: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.s
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.s
+
+# target to generate assembly for a file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.s
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.cpp.s
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.obj: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.obj
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.obj
+
+# target to build an object file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.obj
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.obj
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.i: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.i
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.i
+
+# target to preprocess a source file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.i
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.i
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.s: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.s
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.s
+
+# target to generate assembly for a file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.s
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.cpp.s
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.obj: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.obj
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.obj
+
+# target to build an object file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.obj
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.obj
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.i: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.i
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.i
+
+# target to preprocess a source file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.i
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.i
+
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.s: .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.s
+
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.s
+
+# target to generate assembly for a file
+.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/.pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.s
+.PHONY : .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.cpp.s
+
 src/main.obj: src/main.cpp.obj
 
 .PHONY : src/main.obj
@@ -206,6 +584,48 @@ help:
 	@echo "... Debug"
 	@echo "... Production"
 	@echo "... Z_DUMMY_TARGET"
+	@echo "... .pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.obj"
+	@echo "... .pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.i"
+	@echo "... .pio/libdeps/nodemcuv2/AsyncTCP/src/AsyncTCP.s"
+	@echo "... .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.obj"
+	@echo "... .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.i"
+	@echo "... .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/AsyncPrinter.s"
+	@echo "... .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.obj"
+	@echo "... .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.i"
+	@echo "... .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCP.s"
+	@echo "... .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.obj"
+	@echo "... .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.i"
+	@echo "... .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/ESPAsyncTCPbuffer.s"
+	@echo "... .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.obj"
+	@echo "... .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.i"
+	@echo "... .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/SyncClient.s"
+	@echo "... .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.obj"
+	@echo "... .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.i"
+	@echo "... .pio/libdeps/nodemcuv2/ESPAsyncTCP/src/tcp_axtls.s"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.obj"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.i"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncEventSource.s"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.obj"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.i"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/AsyncWebSocket.s"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.obj"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.i"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/SPIFFSEditor.s"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.obj"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.i"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebAuthentication.s"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.obj"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.i"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebHandlers.s"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.obj"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.i"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebRequest.s"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.obj"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.i"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebResponses.s"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.obj"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.i"
+	@echo "... .pio/libdeps/nodemcuv2/ESP_Async_WebServer/src/WebServer.s"
 	@echo "... src/main.obj"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

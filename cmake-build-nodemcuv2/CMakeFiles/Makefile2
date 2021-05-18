@@ -63,10 +63,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler
+CMAKE_SOURCE_DIR = /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2
+CMAKE_BINARY_DIR = /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -97,14 +97,14 @@ clean: CMakeFiles/Production.dir/clean
 CMakeFiles/Z_DUMMY_TARGET.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Z_DUMMY_TARGET.dir/build.make CMakeFiles/Z_DUMMY_TARGET.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles --progress-num=1,2 "Built target Z_DUMMY_TARGET"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Built target Z_DUMMY_TARGET"
 .PHONY : CMakeFiles/Z_DUMMY_TARGET.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Z_DUMMY_TARGET.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Z_DUMMY_TARGET.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles 0
 .PHONY : CMakeFiles/Z_DUMMY_TARGET.dir/rule
 
 # Convenience name for target.
@@ -124,14 +124,14 @@ CMakeFiles/Z_DUMMY_TARGET.dir/clean:
 CMakeFiles/Debug.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Debug.dir/build.make CMakeFiles/Debug.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Debug.dir/build.make CMakeFiles/Debug.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles --progress-num= "Built target Debug"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num= "Built target Debug"
 .PHONY : CMakeFiles/Debug.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Debug.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Debug.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles 0
 .PHONY : CMakeFiles/Debug.dir/rule
 
 # Convenience name for target.
@@ -151,14 +151,14 @@ CMakeFiles/Debug.dir/clean:
 CMakeFiles/Production.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Production.dir/build.make CMakeFiles/Production.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Production.dir/build.make CMakeFiles/Production.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles --progress-num= "Built target Production"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles --progress-num= "Built target Production"
 .PHONY : CMakeFiles/Production.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Production.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Production.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles 0
 .PHONY : CMakeFiles/Production.dir/rule
 
 # Convenience name for target.

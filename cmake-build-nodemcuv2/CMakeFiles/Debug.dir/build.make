@@ -62,10 +62,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler
+CMAKE_SOURCE_DIR = /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2
+CMAKE_BINARY_DIR = /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2
 
 # Utility rule file for Debug.
 
@@ -73,7 +73,7 @@ CMAKE_BINARY_DIR = /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkl
 include CMakeFiles/Debug.dir/progress.make
 
 CMakeFiles/Debug:
-	cd /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler && platformio -c clion run --target debug -enodemcuv2
+	cd /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay && platformio -c clion run --target debug -enodemcuv2
 
 Debug: CMakeFiles/Debug
 Debug: CMakeFiles/Debug.dir/build.make
@@ -90,6 +90,6 @@ CMakeFiles/Debug.dir/clean:
 .PHONY : CMakeFiles/Debug.dir/clean
 
 CMakeFiles/Debug.dir/depend:
-	cd /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2 /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2 /Users/wes/local-dev/projects-wes/wj/clion/platformio/sprinkler/cmake-build-nodemcuv2/CMakeFiles/Debug.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2 && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2 /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2 /Users/wes/local-dev/projects-wes/wj/clion/platformio/iot-sprinkler-relay/cmake-build-nodemcuv2/CMakeFiles/Debug.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Debug.dir/depend
 
