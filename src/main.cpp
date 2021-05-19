@@ -30,12 +30,18 @@ void ReturnStatus() {
     bool zone4_is_on  = digitalRead(relay_pin_4) == relay_on;
     Serial.printf( " -- Zone #4 is %s", zone4_is_on ?"TRUE": "FALSE" );
 
-    char statusReturn[400];
+    // If you want one, you can write it yourself. Here's what you need to think about:
+    // - Who is going to allocate the storage for the returned string?
+    // - Who is going to free the storage for the returned string?
+    // - Is it going to be thread-safe or not?
+    // - Is there going to be a limit on the maximum length of the returned string or not?
 
-    snprintf( statusReturn, 400,
-        "{led: [led1: %c], pod1: [zone1: %c, zone2: %c, zone3: %c, zone4: %c], pod2: [zone1: %c, zone2: %c, zone3: %c, zone4: %c]}",
-        char(led_is_on), char(zone1_is_on), char(zone2_is_on), char(zone3_is_on), char(zone4_is_on), char(zone1_is_on), char(zone2_is_on), char(zone3_is_on), char(zone4_is_on)
+    char statusReturn[800];
+    int truncCount = snprintf(statusReturn, 800, "{led: [led1:%s], pod1: [zone1:%s, zone2:%s, zone3:%s, zone4:%s], pod2: [zone1:%s, zone2:%s, zone3:%s, zone4:%s]}",
+        led_is_on?"1": "0", zone1_is_on?"1": "0", zone2_is_on?"1": "0", zone3_is_on?"1": "0", zone4_is_on?"1": "0", zone1_is_on?"1": "0", zone2_is_on?"1": "0", zone3_is_on?"1": "0", zone4_is_on?"1": "0"
     );
+
+    Serial.println("Truncation count: " + String(truncCount));
 
     server.send(200,"text/plain", statusReturn);
 }
