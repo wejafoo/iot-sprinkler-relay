@@ -39,7 +39,7 @@ CMAKE_CODEBLOCKS_MAKE_ARGUMENTS:STRING=-j16
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //Build Types reflect PlatformIO Environments
-CMAKE_CONFIGURATION_TYPES:STRING=nodemcuv2;esp01;
+CMAKE_CONFIGURATION_TYPES:STRING=esp01;nodemcuv2;
 
 //CXX compiler
 CMAKE_CXX_COMPILER:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/CC

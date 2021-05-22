@@ -1,106 +1,197 @@
 
 
-// NOTE: guh -- https://forum.arduino.cc/t/pyserial-and-esptools-directory-error/671804/5
-#include <Arduino.h>
+// AT Commands for quad relay
+// Open     relay 1:    A0 01 01 A2
+// Close    relay 1:    A0 01 00 A1
+// Open     relay 2:    A0 02 01 A3
+// Close    relay 2:    A0 02 00 A2
+// Open     relay 3:    A0 03 01 A4
+// Close    relay 3:    A0 03 00 A3
+// Open     relay 4:    A0 04 01 A5
+// Close    relay 4:    A0 04 00 A4
+
+/*
+    HTTP over TLS (HTTPS) example sketch
+    This example demonstrates how to use WiFiClientSecure class to access HTTPS API.
+    We fetch and display the status of esp8266/Arduino project continuous integration build.
+*/
+
+// #include <Arduino.h>
+// #include <WiFiClientSecure.h>
+// #include <SPI.h>
 #include <ESP8266WiFi.h>
-#include <ESP8266WebServer.h>
-#define relay_on LOW
-#define relay_off HIGH
-#define relay_pin_1 D1                   // Relay #1
-#define relay_pin_2 D2                   // Relay #2
-#define relay_pin_3 D5                   // Relay #3
-#define relay_pin_4 D6                   // Relay #4
-#define led_on LOW                       // LED
-#define led_off HIGH
-#define led_pin 16
-#define ssid "bilbo"                     // WiFi
-#define password "readyplayer1"
+#include <ArduinoJson.h>
 
-ESP8266WebServer server(80);
+#ifndef STASSID
+#define STASSID		"bilbo";
+#define STAPSK		"readyplayer1";
+#define HOST		"dev.weja.us";
+#define PODID		1;
+#define SLEEP		60000;
+#define SLEEPDOH	600000;
+#endif
 
-void ReturnStatus() {
-    bool led_is_on    = digitalRead(led_pin)     == led_on;
-    Serial.printf( "LED is on: %s", led_is_on       ?"TRUE": "FALSE" );
-    bool zone1_is_on  = digitalRead(relay_pin_1) == relay_on;
-    Serial.printf( " -- Zone #1 is %s", zone1_is_on ?"TRUE": "FALSE" );
-    bool zone2_is_on  = digitalRead(relay_pin_2) == relay_on;
-    Serial.printf( " -- Zone #2 is %s", zone2_is_on ?"TRUE": "FALSE" );
-    bool zone3_is_on  = digitalRead(relay_pin_3) == relay_on;
-    Serial.printf( " -- Zone #3 is %s", zone3_is_on ?"TRUE": "FALSE" );
-    bool zone4_is_on  = digitalRead(relay_pin_4) == relay_on;
-    Serial.printf( " -- Zone #4 is %s", zone4_is_on ?"TRUE": "FALSE" );
-
-    // If you want one, you can write it yourself. Here's what you need to think about:
-    // - Who is going to allocate the storage for the returned string?
-    // - Who is going to free the storage for the returned string?
-    // - Is it going to be thread-safe or not?
-    // - Is there going to be a limit on the maximum length of the returned string or not?
-
-    char statusReturn[800];
-    int truncCount = snprintf(statusReturn, 800, "{led: [led1:%s], pod1: [zone1:%s, zone2:%s, zone3:%s, zone4:%s], pod2: [zone1:%s, zone2:%s, zone3:%s, zone4:%s]}",
-        led_is_on?"1": "0", zone1_is_on?"1": "0", zone2_is_on?"1": "0", zone3_is_on?"1": "0", zone4_is_on?"1": "0", zone1_is_on?"1": "0", zone2_is_on?"1": "0", zone3_is_on?"1": "0", zone4_is_on?"1": "0"
-    );
-
-    Serial.println("Truncation count: " + String(truncCount));
-
-    server.send(200,"text/plain", statusReturn);
-}
-
-void SetPin(byte pin_number, byte new_pin_state) {
-    digitalWrite(pin_number, new_pin_state);
-    Serial.print("\nSetting pin#");
-    Serial.print(pin_number);
-    Serial.print(" to: ");
-    Serial.println(new_pin_state);
-    ReturnStatus();
-}
+const char*	ssid		= STASSID;
+const char*	pwd			= STAPSK;
+const char*	hst			= HOST;
+const int	podId		= PODID;
+const int	sleep		= SLEEP;
+const int	sleepDoh	= SLEEPDOH;
 
 void setup() {
-    pinMode(relay_pin_1, OUTPUT);
-    pinMode(relay_pin_2, OUTPUT);
-    pinMode(relay_pin_3, OUTPUT);
-    pinMode(relay_pin_4, OUTPUT);
-    SetPin(relay_pin_1, relay_off);
-    SetPin(relay_pin_2, relay_off);
-    SetPin(relay_pin_3, relay_off);
-    SetPin(relay_pin_4, relay_off);
+	Serial.begin(115200);
+	Serial.println();
+	Serial.println(ssid);
+	WiFi.mode(WIFI_STA);			// limit access to only WiFi(no router)
+	WiFi.begin(ssid, pwd);
 
-    Serial.begin(115200);
-    pinMode(led_pin, OUTPUT);
+	while ( WiFi.status() != WL_CONNECTED ) {
+		delay(1000);
+		Serial.print(".");
+	}
 
-    Serial.println();
-    Serial.println("Configuring access point...");
-    WiFi.begin(ssid, password);
-    while ( WiFi.status() != WL_CONNECTED ) {
-        delay(500);
-        Serial.print(".");
-    }
-    Serial.println( "WiFi connected!");
-    Serial.print("IP address: \n");
-    Serial.println(WiFi.localIP());
+	Serial.print("conn:");
+	Serial.println( WiFi.localIP() );
 
-    server.on("/stat"                   , []() { ReturnStatus();                  });
-    server.on("/led/1"                  , []() { SetPin(led_pin,     led_on    ); });
-    server.on("/led/0"                  , []() { SetPin(led_pin,     led_off   ); });
-    server.on("/pod/1/zone/1/action/1"  , []() { SetPin(relay_pin_1, relay_on  ); });
-    server.on("/pod/1/zone/1/action/0"  , []() { SetPin(relay_pin_1, relay_off ); });
-    server.on("/pod/1/zone/2/action/1"  , []() { SetPin(relay_pin_2, relay_on  ); });
-    server.on("/pod/1/zone/2/action/0"  , []() { SetPin(relay_pin_2, relay_off ); });
-    server.on("/pod/1/zone/3/action/1"  , []() { SetPin(relay_pin_3, relay_on  ); });
-    server.on("/pod/1/zone/3/action/0"  , []() { SetPin(relay_pin_3, relay_off ); });
-    server.on("/pod/1/zone/4/action/1"  , []() { SetPin(relay_pin_4, relay_on  ); });
-    server.on("/pod/1/zone/4/action/0"  , []() { SetPin(relay_pin_4, relay_off ); });
-    server.on("/pod/2/zone/1/action/1"  , []() { SetPin(relay_pin_1, relay_on  ); });
-    server.on("/pod/2/zone/1/action/0"  , []() { SetPin(relay_pin_1, relay_off ); });
-    server.on("/pod/2/zone/2/action/1"  , []() { SetPin(relay_pin_2, relay_on  ); });
-    server.on("/pod/2/zone/2/action/0"  , []() { SetPin(relay_pin_2, relay_off ); });
-    server.on("/pod/2/zone/3/action/1"  , []() { SetPin(relay_pin_1, relay_on  ); });
-    server.on("/pod/2/zone/3/action/0"  , []() { SetPin(relay_pin_1, relay_off ); });
-    server.on("/pod/2/zone/4/action/1"  , []() { SetPin(relay_pin_2, relay_on  ); });
-    server.on("/pod/2/zone/4/action/0"  , []() { SetPin(relay_pin_2, relay_off ); });
-    Serial.print("HTTP server starting..." );
-    server.begin();
-    Serial.print("done" );
+	configTime(3 * 3600, 0, "pool.ntp.org", "time.nist.gov");		// Set time via NTP, as required for x.509 validation
+	Serial.print("Sync-ing time(NTP)");
+	time_t now = time(nullptr);
+	while ( now < 8 * 3600 * 2 ) {
+		delay(500);
+		Serial.print(".");
+		now = time(nullptr);
+	}
+	struct tm timeinfo;
+	gmtime_r( &now, &timeinfo );
+	Serial.print( "Last booted: ");
+	Serial.print( asctime( &timeinfo ));
 }
 
-void loop() { server.handleClient(); }
+void loop() {
+
+	Serial.println("> RESET ZONE: 1 ..........done");
+	Serial.println("> RESET ZONE: 2 ..........done");
+	Serial.println("> RESET ZONE: 3 ..........done");
+	Serial.println("> RESET ZONE: 4 ..........done");
+
+	WiFiClient client;			// WiFiClientSecure client;		// Use WiFiClientSecure class to create TLS connection
+
+	client.setTimeout( 100000 );
+	if ( ! client.connect( hst, 4000 )) {
+		Serial.println( "CONNDOH: TIMEOUT" );
+		delay(sleepDoh);
+		return;
+	}
+
+	Serial.print("> Incoming message .......");
+
+	client.print("GET /api/pod/");
+	client.print( podId );
+	client.println(" HTTP/1.0");
+	client.print("Host: ");
+	client.println(hst);
+	client.println("Connection: close");
+
+	if ( client.println() == 0 ) {
+		Serial.println("SENDDOH");
+		client.stop();
+		return;
+	}
+
+	char status[32] = {0};																// Check HTTP status
+	client.readBytesUntil( '\r', status, sizeof( status ) );
+	if ( strcmp( status, "HTTP/1.1 200 OK" ) != 0 ) {
+		Serial.print("RESPDOH: ");
+		Serial.println(status);
+		client.stop();
+		return;
+	}
+
+	char endOfHeader[] = "\r\n\r\n";													// Skip headers
+	if ( ! client.find( endOfHeader )) {
+		Serial.println("PARSEDOH: Found no end-of-header sequence");
+		client.stop();
+		return;
+	}
+
+	DynamicJsonDocument doc( 1800 );													// arduinojson.org/v6/assistant way underestimated with 256
+	DeserializationError error = deserializeJson(doc, client);
+	if ( error ) {
+		Serial.print("DESERIALDOH: ");
+		Serial.println( error.f_str() );
+		client.stop();
+		return;
+	}
+
+	Serial.println("RECIEVED");
+
+	const JsonObject	podObj	= doc.as<JsonObject>();
+	const int			pod		= podObj["pod"];
+
+	Serial.print("> Confirming relevancy...");
+
+	if ( pod == podId ) {
+		Serial.println("CONFIRMED: POD1");
+		Serial.print("POD1> Compiling zones...");
+
+		JsonObject zoneObj	= podObj["payload"].as<JsonObject>();
+
+		if ( zoneObj.containsKey("1") || zoneObj.containsKey("2") ||
+			 zoneObj.containsKey("3") || zoneObj.containsKey("4")) {
+
+			Serial.println("done");
+
+			if (zoneObj.containsKey("1")) {
+				int duration = zoneObj["1"].as<int>();
+				if (duration > 0) {
+					Serial.print("POD1> ZONE1> ON: ");
+					Serial.println(duration);
+					delay(duration);
+					Serial.println("POD1> ZONE1> OFF");
+				}
+			}
+
+			if (zoneObj.containsKey("2")) {
+				int duration = zoneObj["2"].as<int>();
+				if (duration > 0) {
+					Serial.print("POD1> ZONE2> ON: ");
+					Serial.println(duration);
+					delay(duration);
+					Serial.println("POD1> ZONE2> OFF");
+				}
+			}
+
+			if (zoneObj.containsKey("3")) {
+				int duration = zoneObj["3"].as<int>();
+				if (duration > 0) {
+					Serial.print("POD1> ZONE3> ON: ");
+					Serial.println(duration);
+					delay(duration);
+					Serial.println("POD1> ZONE3> OFF");
+				}
+			}
+
+			if (zoneObj.containsKey("4")) {
+				int duration = zoneObj["4"].as<int>();
+				if (duration > 0) {
+					Serial.print("POD1> ZONE4> ON: ");
+					Serial.println(duration);
+					delay(duration);
+					Serial.println("POD1> ZONE4> OFF");
+				}
+			}
+		} else {
+			Serial.println("NONE");
+			Serial.println("POD1> No active zone instructions found...message ignored");
+			Serial.println("POD1> EXIT");
+		}
+	} else {
+		Serial.println("EMPTY");
+		Serial.println("POD1> No instructions were found relevant to this pod...message ignored");
+		Serial.println("POD1> EXIT");
+	}
+
+	client.stop();
+	Serial.println("... ZzZzZzZzZzZzZzZzZz ...");
+	delay(sleep);
+}

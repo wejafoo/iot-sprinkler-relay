@@ -1,5 +1,20 @@
 
 
+**/*.SAVE
+**/secrets
+.ARCHIVE
+/.fd.*
+env
+.idea
+**/__pycache__
+**/.DS_Store
+*swp
+lib/
+**/*.pyc
+/dist
+/tmp
+/out-tsc
+
 .pio
 venv
 cmake-build-*

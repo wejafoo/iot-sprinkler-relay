@@ -1,158 +1,87 @@
 
-// NOTE: guh -- https://forum.arduino.cc/t/pyserial-and-esptools-directory-error/671804/5
+
+
+// AT Commands for quad relay
+// Open relay 1: A0 01 01 A2
+// Close relay 1: A0 01 00 A1
+// Open relay 2: A0 02 01 A3
+// Close relay 2: A0 02 00 A2
+// Open relay 3: A0 03 01 A4
+// Close relay 3: A0 03 00 A3
+// Open relay 4: A0 04 01 A5
+// Close relay 4: A0 04 00 A4
+
 
 #include <ESP8266WiFi.h>
-#include <ESP8266WebServer.h>
 
-#define relay_on LOW
-#define relay_off HIGH
-#define relay_pin_1 D1                                      // Relay #1
-#define relay_pin_2 D2                                      // Relay #2
-#define relay_pin_3 D5                                      // Relay #3
-#define relay_pin_4 D6                                      // Relay #4
-#define led_on LOW                                          // LED
-#define led_off HIGH
-#define led_pin 16
+#define RELAY LED_BUILTIN // relay would connect to GPIO0
 
-#define ssid "bilbo"                                        // WiFi
-#define password "readyplayer1"
+const char* ssid = "bilbo";
+const char* password = "readyplayer1";
 
-ESP8266WebServer server(80);
-
-
+WiFiServer server(80);
+ 
 void setup() {
-  
-  pinMode(relay_pin_1, OUTPUT);                              // Relay #1
-  pinMode(relay_pin_2, OUTPUT);                              // Relay #2
-  pinMode(relay_pin_3, OUTPUT);                              // Relay #3
-  pinMode(relay_pin_4, OUTPUT);                              // Relay #4
-    
-  SetPin(relay_pin_1, relay_off);
-  SetPin(relay_pin_2, relay_off);
-  SetPin(relay_pin_3, relay_off);
-  SetPin(relay_pin_4, relay_off);
-  
-  Serial.begin(115200);                                       // start console
-  
-  pinMode(led_pin, OUTPUT);                                   // LED
-  
-  Serial.println();                                           // Start WiFi
-  Serial.println("Configuring access point...");
-  
+  Serial.begin(115200);
+ 
+  pinMode(RELAY,OUTPUT);
+ 
+  Serial.print("Connecting to ");
+  Serial.println(ssid);
+ 
   WiFi.begin(ssid, password);
-
-  while ( WiFi.status() != WL_CONNECTED ) {
+ 
+  while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
+  Serial.println("");
+  Serial.println("WiFi connected");
 
-  Serial.println();
-  Serial.println( "WiFi connected!" );
-  Serial.print(   "IP address: \n"  );
-  Serial.println(  WiFi.localIP()   );
-
-  server.on("/"                      , []() { RerenderButtons();                   });
-  server.on("/led/1"                 , []() { SetPin(led_pin,       led_on      ); });
-  server.on("/led/0"                 , []() { SetPin(led_pin,       led_off     ); });
-  server.on("/pod/1/zone/1/action/1" , []() { SetPin(relay_pin_1,   relay_on    ); });
-  server.on("/pod/1/zone/1/action/0" , []() { SetPin(relay_pin_1,   relay_off   ); });
-  server.on("/pod/1/zone/2/action/1" , []() { SetPin(relay_pin_2,   relay_on    ); });
-  server.on("/pod/1/zone/2/action/0" , []() { SetPin(relay_pin_2,   relay_off   ); });
-  server.on("/pod/1/zone/3/action/1" , []() { SetPin(relay_pin_3,   relay_on    ); });
-  server.on("/pod/1/zone/3/action/0" , []() { SetPin(relay_pin_3,   relay_off   ); });
-  server.on("/pod/1/zone/4/action/1" , []() { SetPin(relay_pin_4,   relay_on    ); });
-  server.on("/pod/1/zone/4/action/0" , []() { SetPin(relay_pin_4,   relay_off   ); });
-  Serial.print("JSON API server starting..." );
+  Serial.print("LED builtin:");
+  Serial.println(LED_BUILTIN);
+ 
   server.begin();
-  Serial.print("done" );
+  Serial.println("Server started");
+   Serial.print("Use this URL to connect: ");
+  Serial.print(WiFi.localIP());
+  Serial.println("/");
 }
-
-
-void loop() { server.handleClient(); }
-
-
-void RerenderButtons() {
+ 
+void loop() {
+  WiFiClient client = server.available();
+  if ( ! client ) { return; }
   
-  bool led_is_on = digitalRead(led_pin)         == led_on;
-  Serial.print( "LED is on: " );
-  Serial.print( led_is_on );
-  bool zone1_is_on = digitalRead(relay_pin_1)   == relay_on;
-  Serial.print( " -- Zone #1 is " );
-  Serial.print( zone1_is_on );
-  bool zone2_is_on = digitalRead(relay_pin_2)   == relay_on;
-  Serial.print( " -- Zone #2 is " );
-  Serial.print( zone2_is_on );
-  bool zone3_is_on = digitalRead(relay_pin_3)   == relay_on;
-  Serial.print( " -- Zone #3 is " );
-  Serial.print( zone3_is_on );
-  bool zone4_is_on = digitalRead(relay_pin_4)   == relay_on;
-  Serial.print( " -- Zone #4 is " );
-  Serial.print( zone4_is_on );
+  Serial.println("new client"); 
+  while( ! client.available() ) { delay(1); }
 
-  String HTML = "{\"zone1\":" + String(zone1_is_on) + "\"zone2\":" + String(zone2_is_on) + "\"zone3\":" + String(zone3_is_on) + "\"zone4\":" + String(zone4_is_on) + "}";
-
-
-  // HTML += R"( <h2>  LED Light  </h2>)";
-  // HTML += R"( <style> input[type="button"] { display: inline-block; width: 64px; padding: 2px; margin-bottom: 4px; }</style>)";
-  // HTML += R"( <input type="button" onClick="location.href='/led/on';"                                   )";
-  // HTML +=           led_is_on?"Disabled": "";
-  // HTML += R"(       value="ON">                                                                         )";
-  // HTML += R"( <input type="button" onClick="location.href='/led/off';"                                  )";
-  // HTML +=           ! led_is_on?"Disabled": "";
-  // HTML += R"(       value="OFF">                                                                        )";
-  // HTML += R"( <br>                                                                                      )";
-  // HTML += R"( <h2>  Zone #1  </h2>                                                                      )";
-  // HTML += R"( <style> input[type="button"] { width: 64px; padding: 2px; margin-bottom: 4px; }</style>   )";
-  // HTML += R"( <input type="button" onClick="location.href='/pod/1/zone/1/mode/on'"                      )";
-  // HTML +=         zone1_is_on?"Disabled": "";
-  // HTML += R"(     value="ON">                                                                           )";
-  // HTML += R"( <input type="button" onClick="location.href='/pod/1/zone/1/mode/off'"                     )";
-  // HTML +=         ! zone1_is_on?"Disabled": "";
-  // HTML += R"(     value="OFF">                                                                          )";
-  // HTML += R"( <br>                                                                                      )";
-  // HTML += R"( <h2>  Zone #2  </h2>                                                                      )";
-  // HTML += R"( <style>input[type="button"] { width: 64px; padding: 2px; margin-bottom: 4px; }</style>    )";
-  // HTML += R"( <input type="button" onClick="location.href='/pod/1/zone/2/mode/on'"                      )";
-  // HTML +=         zone2_is_on?"Disabled": "";
-  // HTML += R"(     value="ON">                                                                           )";
-  // HTML += R"( <input type="button" onClick="location.href='/pod/1/zone/2/mode/off'"                     )";
-  // HTML +=         ! zone2_is_on?"Disabled": "";
-  // HTML += R"(     value="OFF">                                                                          )";
-  // HTML += R"( <br>                                                                                      )";
-  // HTML += R"( <h2>  Zone #3  </h2>                                                                      )";
-  // HTML += R"( <style>input[type="button"] { width: 64px; padding: 2px; margin-bottom: 4px; }</style>    )";
-  // HTML += R"( <input type="button" onClick="location.href='/pod/1/zone/3/mode/on'"                      )";
-  // HTML +=         zone3_is_on ? "Disabled" : "";
-  // HTML += R"(     value="ON">                                                                           )";
-  // HTML += R"( <input type="button" onClick="location.href='/pod/1/zone/3/mode/off'"                     )";
-  // HTML +=         ! zone3_is_on?"Disabled": "";
-  // HTML += R"(     value="OFF">                                                                          )";
-  // HTML += R"( <br>                                                                                      )";
-  // HTML += R"( <h2>  Zone #4  </h2>                                                                      )";
-  // HTML += R"( <style>input[type="button"] { width: 64px; padding: 2px; margin-bottom: 4px; }</style>    )";
-  // HTML += R"( <input type="button" onClick="location.href='/pod/1/zone/4/mode/on'"                      )";
-  // HTML +=         zone4_is_on?"Disabled": "";
-  // HTML += R"(     value="ON">                                                                           )";
-  // HTML += R"( <input type="button" onClick="location.href='/pod/1/zone/4/mode/off'"                     )";
-  // HTML +=         ! zone4_is_on?"Disabled": "";
-  // HTML += R"(     value="OFF">                                                                          )";
-
-
-
-  server.send(200, "text/json", HTML);
-
-
-}
-
-
-void SetPin(byte pin_number, byte new_pin_state) {
+  String request = client.readStringUntil('\r');
+  Serial.println(request);
+  client.flush();
+ 
+  int value = LOW;
+  if ( request.indexOf( "/RELAY=ON" ) != -1 ) {
+    Serial.println("RELAY=ON");
+    digitalWrite(RELAY,LOW);
+    value = LOW;
+  }
   
-  digitalWrite(pin_number, new_pin_state);
+  if (request.indexOf( "/RELAY=OFF" ) != -1 ) {
+    Serial.println("RELAY=OFF");
+    digitalWrite(RELAY,HIGH);
+    value = HIGH;
+  }
   
-  Serial.print("\nSetting pin#");
-  Serial.print(pin_number);
-  Serial.print(" to: ");
-  Serial.println(new_pin_state);
-
-  RerenderButtons();
+  client.println("HTTP/1.1 200 OK");
+  client.println("Content-Type: text/html");
+  client.println("");
+  client.println("<!DOCTYPE HTML>");
+  client.println("<html>");
+  client.println("<head><title>ESP8266 RELAY Control</title></head>");
+  client.print("Relay is now: ");
+  if ( value == HIGH ) { client.print("OFF"); } else { client.print("ON"); }
+  client.println("<br><br>");
+  client.println("Turn <a href=\"/RELAY=OFF\">OFF</a> RELAY<br>");
+  client.println("Turn <a href=\"/RELAY=ON\">ON</a> RELAY<br>");
+  client.println("</html>");
 }
