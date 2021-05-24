@@ -2,6 +2,7 @@
 
 **/*.SAVE
 **/secrets
+**/.secrets
 .ARCHIVE
 /.fd.*
 env
